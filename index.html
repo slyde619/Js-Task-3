@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js task &mdash; yugioh</title>
+</head>
+<body>
+    
+    <script>
+        // Function Creation that takes a single parameter (num)
+    const checkWord = (num) =>{
+        let element;
+        let array = [];
+
+        // looping through each elements and checking conditions to assign the given values
+        for(let i = 0; i<= num; i++){
+            if(i % 2 === 0){
+                element = "yu";
+            } else if(i % 3 === 0){
+                element = "gi";
+            } else if (i % 5 === 0){
+                element = "oh";
+            } else if(i % 2 === 0 && i % 3 === 0){
+                element = "yu-gi";
+            } else if(i % 2 === 0 && i % 5 === 0){
+                element = "yu-oh";
+            } else if(i % 3 === 0 && i % 5 === 0){
+                element = "gi-oh";
+            } else if(i % 2 === 0 && i % 3 === 0 && i % 5 === 0){
+                element = "yu-gi-oh";
+            } else{
+                element= i;
+            }
+            //pushing element to the end of array
+            array.push(element);
+        }
+        console.log(array);
+        return array;
+    }
+    // Calling/Initialising Function
+    checkWord(100); //Passing 100 as the argument
+    checkWord(90); // Random choice
+    </script>
+</body>
+</html>
